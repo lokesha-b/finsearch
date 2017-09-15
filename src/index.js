@@ -13,7 +13,6 @@ const store = createStore(rootReducers);
 console.log('state ', store.getState());
 
 store.subscribe(() => console.log('store'), store.getState());
-//store.dispatch(search('Bank'));
 ReactDOM.render(
 <Provider  store={store}>
   <App />

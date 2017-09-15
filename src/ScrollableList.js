@@ -3,7 +3,6 @@ import  './index.css';
 import { bindActionCreators } from 'redux';
 import { search } from './actions';
 
-//import Jquery from 'jquery';
 import financialList from './finInstitutionsList.json'
 import { connect } from 'react-redux';
 import SearchList from './SearchList';
@@ -48,25 +47,13 @@ componentDidMount()
 displayData()
 {
 
-  //console.log ('fin list'+ JSON.stringify(financialList));
-console.log('faddsfsdf');
-  /* for (let i=0; i< financialList.products.length; i++)
-  {
-    console.log('1111');
-    let jsonObj = financialList.products[i];
-    for (let key in jsonObj)
-    {
-      console.log('key and value' + jsonObj[key]);
-    }
-  }*/
-  //console.log('financialList.products[0]' + JSON.stringify(financialList.products[0]));
   let jsonObj = financialList.products;
-  let abc = jsonObj.map((k) =>  { return (<div> <h3> {k.name} </h3> </div>) } );
+  let finalList = jsonObj.map((k) =>  { return (<div> <h3> {k.name} </h3> </div>) } );
   console.log('abc' + abc);
 return (
   <div>
   <ul>
-  {abc}
+  {finalList}
   </ul>
   </div>
 );
@@ -74,25 +61,18 @@ return (
 
 getComponent(event)
 {
-  console.log('selected component');
-  console.log('event' + event.target.text);
-  event.currentTarget.style.backgroundColor = '#ccc';
+
 }
 
 displayList()
 {
-//console.log('hello'+  Jquery);
 let jsonObj = financialList.products;
 let abc = jsonObj.map((k) =>  { return ( <li   > <a  onClick= { this.getComponent.bind(this) } href="#"> {k.name} </a> </li> ) });
-/*
-<li> <a href="#"> abc </a> </li>
-<li> <a href="#"> def </a> </li>
-<li> <a href="#"> gef </a> </li>
-*/
+
   return (
       <div id="topPanel">
       <ul id="list">
-        { abc }
+        { finalList }
       </ul>
       </div>
   );
@@ -117,21 +97,16 @@ filterResults()
 
 searchResults(event)
 {
-  console.log('search results');
 
-    console.log('calling search results');
     this.props.search(event.target.value);
-
     this.setState({searchValue : event.target.value,
       showSearchList: true
       })
 
-  console.log('search results', this.props);
 }
 
 changeHandler(value)
 {
-  console.log('vaaaaaalueee', value);
   this.setState({
      searchValue: value,
      showSearchList: false
@@ -144,7 +119,6 @@ changeHandler(value)
 handleKeyPress(event)
 {
   if (event.key === 'Enter') {
-        console.log('do validate');
         this.setState({
            showSearchList: false
          });
@@ -154,7 +128,6 @@ handleKeyPress(event)
 
 onBlurEvent(value)
 {
-  console.log('on blur triggered');
 /* this.setState({
      showSearchList: false
    }); */
@@ -162,9 +135,7 @@ onBlurEvent(value)
 
 render()
 {
-  //      { this.displayData() }
-console.log('haiiiiiiiiii');
-console.log('propssssss', this.props);
+
   return (<div>
 
       <input type="text" id="searchValue" ref="myInput"  className="searchText" onKeyPress={event => this.handleKeyPress(event)}

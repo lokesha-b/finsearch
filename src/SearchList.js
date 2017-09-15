@@ -19,29 +19,17 @@ selectedSearch(event)
   this.props.setSearchValue(this.props[event.target.id].name);
 }
 changeHandler(event) {
-      //  if (typeof this.props.onChange === 'function') {
-      console.log('eventtttt', event);
-
-            this.props.onChange(this.props[event.target.id].name);
-      //  }
-    }
+    this.props.onChange(this.props[event.target.id].name);
+  }
 
   render()
   {
-    console.log('this.props', JSON.stringify(this.props));
-    console.log('this.props[a].nameeeeeeeee', this.props.name);
-    console.log('this.props[a].length', this.props.length);
-
-    console.log('this.props.setSearchValue', this.props.setSearchValue);
-    console.log('Object.keys(a).length', Object.keys(this.props).length );
 
     return (
 
       <div>
       { Object.keys(this.props).length <=2 ? null :
-
       <div className="displayList">
-
       <ul id="nav">
         {
             Object.keys(this.props).map((key, index) => { console.log('this.props[key].name', this.props[key].name) ;
@@ -50,7 +38,6 @@ changeHandler(event) {
             onClick=  { this.changeHandler.bind() } > { this.props[key].name }   </li> </div> })
         }
       </ul>
-
       </div>
       }
       </div>
