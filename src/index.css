@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.headerLabel
+{
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+input:hover{
+    border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+input:focus{
+     border-color:#4d90fe;
+}
+
+.row
+{
+  height: 50px;
+}
+
+.tabularData
+{
+  margin-left: 30px;
+}
+
+.header
+{
+  text-align: center;
+  background-color: gray;
+  line-height: 40px;
+}
+.tableHeader
+{
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+li
+{
+  line-height: 20px;
+
+}
+.citeUrl
+{
+  font-size: 14px;
+  color: #006621;
+  font-style: normal
+}
+
+#list
+{
+  list-style-type: none;
+
+  padding: 0;
+   margin: 0;
+   height: 400px;
+   width: 405px;
+  overflow:hidden;
+  overflow-y:scroll;
+
+}
+
+#list li a
+{
+  border:1px solid #ddd;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  width: 385px;
+  margin-left: 20px;
+  margin-top: -1px;
+
+}
+
+
+.searchText
+{
+  padding: 12px 0px 12px 10px;
+  font-size: 16px;
+  width: 385px;
+  text-align: left;
+  width: 500px;
+  padding-left: 40px;
+  border-radius: 25px;
+  background: url(searchIcon.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  margin-left: 50px;
+
+}
+
+
+.displayList
+{
+  max-height: 500px;
+overflow-y: scroll;
+width: 490px;
+margin-left: 60px;
+position: absolute;
+background-color: #f9f9f9;
+-webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+z-index: 1;
+font-size: 13px
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+ li:hover  {
+    background: #DCDCDC;
+}

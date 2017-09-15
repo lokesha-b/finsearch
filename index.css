@@ -1,0 +1,47 @@
+.loginDiv1
+{
+  padding: 10px;
+  border: 1px solid red;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 30px;
+  display: inline-block;
+  margin-left: 20px;
+float: right;
+}
+
+.login
+{
+}
+
+.loginDiv
+{
+  background-color: gray;
+  width: 800px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.innerDiv
+{
+  width: 200px;
+  height: 10px;
+  background-color: blue;
+  padding: 20px;
+  margin-left: 5px;
+
+}
+
+.loginDiv div:first-child{
+  background-color: red;
+
+}
+
+.loginDiv div:last-child
+{
+  background-color: red;
+  margin-right: 5px;
+
+}

@@ -1,0 +1,26 @@
+body{
+padding: 0px ;
+margin: 0px ;
+
+
+}
+
+
+.topHeader
+{
+  line-height: 50px;
+  background-color: black;
+}
+
+
+.headerItemsUl
+{
+list-style: none;
+}
+
+.headerLi
+{
+  display: inline;
+  margin-left: 68px;
+  color: white;
+}
